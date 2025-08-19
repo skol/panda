@@ -1,0 +1,48 @@
+
+---
+10000 и 1000
+---
+                            Rate compact_map compact_each_loop compact_for_loop compact_grep compact_reverse_twice compact_reverse_twice_pre compact_reverse_inplace
+compact_map               2188/s          --               -2%              -7%         -14%                  -40%                      -41%                    -64%
+compact_each_loop         2236/s          2%                --              -5%         -12%                  -39%                      -40%                    -64%
+compact_for_loop          2341/s          7%                5%               --          -7%                  -36%                      -37%                    -62%
+compact_grep              2530/s         16%               13%               8%           --                  -31%                      -32%                    -59%
+compact_reverse_twice     3642/s         66%               63%              56%          44%                    --                       -2%                    -41%
+compact_reverse_twice_pre 3730/s         70%               67%              59%          47%                    2%                        --                    -39%
+compact_reverse_inplace   6162/s        182%              176%             163%         144%                   69%                       65%                      --
+
+---
+100 и 10000
+---
+                            Rate compact_each_loop compact_grep compact_reverse_inplace compact_map compact_for_loop compact_reverse_twice compact_reverse_twice_pre
+compact_each_loop          406/s                --         -20%                    -21%        -27%             -28%                  -61%                      -62%
+compact_grep               509/s               25%           --                     -0%         -8%              -9%                  -52%                      -52%
+compact_reverse_inplace    511/s               26%           0%                      --         -8%              -9%                  -52%                      -52%
+compact_map                556/s               37%           9%                      9%          --              -1%                  -47%                      -47%
+compact_for_loop           561/s               38%          10%                     10%          1%               --                  -47%                      -47%
+compact_reverse_twice     1055/s              160%         107%                    106%         90%              88%                    --                       -0%
+compact_reverse_twice_pre 1059/s              161%         108%                    107%         90%              89%                    0%                        --
+
+---
+1000 и 100000
+---
+                            Rate compact_reverse_inplace compact_grep compact_map compact_for_loop compact_each_loop compact_reverse_twice_pre compact_reverse_twice
+compact_reverse_inplace   13.0/s                      --         -23%        -23%             -24%              -42%                      -60%                  -60%
+compact_grep              16.9/s                     30%           --         -0%              -1%              -25%                      -48%                  -48%
+compact_map               16.9/s                     30%           0%          --              -1%              -25%                      -48%                  -48%
+compact_for_loop          17.1/s                     31%           1%          1%               --              -24%                      -47%                  -47%
+compact_each_loop         22.4/s                     73%          33%         33%              31%                --                      -31%                  -31%
+compact_reverse_twice_pre 32.3/s                    149%          92%         91%              89%               44%                        --                   -0%
+compact_reverse_twice     32.3/s                    149%          92%         91%              89%               44%                        0%                    --
+
+---
+1000 и 1000000
+---
+                             Rate compact_reverse_inplace compact_grep compact_map compact_for_loop compact_reverse_twice compact_reverse_twice_pre compact_each_loop
+compact_reverse_inplace   0.942/s                      --         -14%        -15%             -21%                  -40%                      -43%              -47%
+compact_grep               1.09/s                     16%           --         -1%              -8%                  -30%                      -33%              -38%
+compact_map                1.11/s                     18%           1%          --              -7%                  -29%                      -32%              -37%
+compact_for_loop           1.20/s                     27%           9%          8%               --                  -24%                      -27%              -32%
+compact_reverse_twice      1.56/s                     66%          43%         41%              31%                    --                       -5%              -12%
+compact_reverse_twice_pre  1.64/s                     74%          50%         48%              37%                    5%                        --               -7%
+compact_each_loop          1.77/s                     88%          61%         60%              48%                   13%                        8%                --
